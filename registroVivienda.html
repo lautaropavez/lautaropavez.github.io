@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Vivienda</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/styleVivienda.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">TercerBit</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1 class="text-left col-12 m-4 p-0 pb-4">Vivienda</h1>
+
+    <div class="card m-5">
+        <div class="card-header bg-primary">
+            <h4 class="card-title text-white">Formulario de Registro</h4>
+        </div>
+
+        <div class="card-body">
+            <div class="container-fluid" >
+                <form action="" id="form">
+                    <div class="row pt-1 m-3">
+
+                        <div class="input-group mb-3 col-6 ">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text ">Metros totales</span>
+                            </div>
+                            <input type="number" class="form-control" id="mtsTotales" placeholder="Mts totales" >
+                        </div>
+                        <div class="input-group mb-3 col-6 ">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text ">Metros cubiertos</span>
+                            </div>
+                            <input type="number" class="form-control" id="mtsCubiertos" placeholder="Mts cubiertos">
+                        </div>
+                        
+                        <div class="input-group mb-3 col-6 ">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text ">Manzana</span>
+                            </div>
+                            <input type="number" class="form-control" id="manzana" placeholder="N° de Manzana" >
+                        </div>
+                        <div class="input-group mb-3 col-6 ">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text ">Casa</span>
+                            </div>
+                            <input type="number" class="form-control" id="casa" placeholder="N° de Casa" >
+                        </div>
+                        <div class="input-group mb-3 col-6 ">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text ">N° Lote</span>
+                            </div>
+                            <input type="number" class="form-control" id="numeroLote" placeholder="N° de Lote" >
+                        </div>
+                        <div class="input-group mb-3 col-6 ">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text ">Calle</span>
+                            </div>
+                            <input type="text" class="form-control" id="calle" placeholder="Nombre de la calle">
+                        </div>
+
+                    </div>
+
+                    <div class="row col-6 mr-0 d-inline-block">
+                        <div class="Usuario input-group ml-3 m-1 ">
+                            <div class=" input-group-prepend">
+                                <span class="tipo input-group-text">Tipo de Usuario</span>
+                            </div>
+                            <div>
+                                <select name="Tipo de Usuario" id="" class="selectUsuario m-2 p-2 ">
+                                    <option value="administrador">Administrador</option>
+                                    <option value="propietario">Propietario</option>
+                                    <option value="inquilino">Inquilino</option>
+                                </select>
+                            </div>
+                            <!-- Botón Modal Tipo de Usuario-->
+                            <button type="button" class="botonTipoUsuario btn btn-primary ml-4 mr-0" data-toggle="modal"
+                                data-target="#myModal">
+                                (+)
+                            </button>
+
+                            <!-- Modal Tipo de Usuario -->
+                            <div class="modal " id="myModal">
+                                <div class="modal-dialog modal-lg col-6 ">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Tipo de Usuario</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="input-group m-2 ">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text ">Tipo de Usuario</span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="tipoUsuario">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary m-2"
+                                                data-dismiss="modal">Guardar</button>
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancelar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row  mt-0 col-6 mr-0 d-inline-block">
+                        <div class="Vivienda input-group ml-3 m-2 mr-0">
+                            <div class="input-group-prepend ">
+                                <span class="tipo  input-group-text">Tipo de Vivienda</span>
+                            </div>
+                            <div>
+                                <select name="Tipo de Usuario" id="" class="selectVivienda m-2 ml-0 p-2">
+                                    <option value="administrador">Inmueble</option>
+                                    <option value="inquilino">Lote</option>
+                                </select>
+                            </div>
+                            <!-- Botón Modal Tipo de Vivienda-->
+                            <button type="button" class="botonTipoVivienda btn btn-primary ml-3 " data-toggle="modal"
+                                data-target="#myModal2">
+                                (+)
+                            </button>
+
+                            <!-- Modal Tipo de Vivienda -->
+                            <div class="modal " id="myModal2">
+                                <div class="modal-dialog modal-lg col-6 ">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Tipo de Vivienda</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="input-group m-2">
+                                                    <div class="input-group-prepend ">
+                                                        <span class="input-group-text ">Tipo de Vivienda</span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="tipoVivienda" >
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary m-2"
+                                                data-dismiss="modal">Guardar</button>
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancelar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Botones -->
+                    <div class="botones">
+                        <div class="row pt-1 m-3">
+                            <button type="submit" onclick = 'enviarformulario()' class="btn btn-primary ml-3 m-2">Guardar</button>
+                            <button type="reset" class="btn btn-secondary m-2">Cancelar</button>
+                        </div>
+
+                    </div>
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-5">
+        <div class="card-header bg-primary">
+            <h4 class="card-title text-white">Viviendas</h4>
+        </div>
+
+        <div class="card-body">
+            <div class="container" id="tablaViviendas">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>mts totales</th>
+                            <th>mts cubiertos</th>
+                            <th>Manzana</th>
+                            <th>Casa</th>
+                            <th>Lote</th>
+                            <th>Calle</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2000</td>
+                            <td>500</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>9</td>
+                            <td>San Martin</td>
+                            <td>
+                                <button type="button" class="btn btn-success">Alta</button>
+                                <button type="button" class="btn btn-danger">Baja</button>
+                                <button type="button" class="btn btn-primary">Modificación</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>3</td>
+                            <td>12</td>
+                            <td>24</td>
+                            <td>Cervantes</td>
+                            <td>
+                                <button type="button" class="btn btn-success">Alta</button>
+                                <button type="button" class="btn btn-danger">Baja</button>
+                                <button type="button" class="btn btn-primary">Modificación</button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>600</td>
+                            <td>300</td>
+                            <td>10</td>
+                            <td>70</td>
+                            <td>45</td>
+                            <td>Espejo</td>
+                            <td>
+                                <button type="button" class="btn btn-success">Alta</button>
+                                <button type="button" class="btn btn-danger">Baja</button>
+                                <button type="button" class="btn btn-primary">Modificación</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

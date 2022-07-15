@@ -1,0 +1,31 @@
+.Usuario{
+    position: relative;
+}
+.Vivienda{
+    position: relative;
+}
+.tipo{
+    margin: 10px;
+}
+.selectUsuario{
+    position: absolute; 
+    left: 139px;
+    top: 2px;
+}
+.selectVivienda{
+    position: absolute; 
+    left: 145px;
+    top: 2px;
+}
+.botonTipoUsuario{
+    margin: 10px;
+    display: inline;
+    position: absolute;  
+    left: 290px;
+}
+.botonTipoVivienda{
+    margin: 10px;
+    display: inline;
+    position: absolute;  
+    left: 270px;
+}
